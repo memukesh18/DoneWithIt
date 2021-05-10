@@ -1,19 +1,24 @@
 import React from 'react';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import colors from '../config/colors';
+import { Image, ImageBackground, StyleSheet, View } from 'react-native';
+import AppButton from '../component/AppButton';
+import AppText from '../component/AppText';
 
 function WelcomeScreen(props) {
     return (
         <ImageBackground 
+            blurRadius= {8}
             source={require("../assets/background1.jpg")}
             style={styles.background}
         >
             <View style={styles.logoContainer}>
                 <Image style={styles.logo} source={require("../assets/firebird-logo.png")}/>
-                <Text>Sell What You Don't Need!</Text>
+                <AppText style={styles.tagline}>Sell What You Don't Need!</AppText>
+                {/* <Text style={styles.tagline}>Sell What You Don't Need!</Text> */}
             </View>
-            <View style={styles.login}>Login</View>
-            <View style={styles.register}>Register</View>
+            <View style={styles.btnContainer}>
+                <AppButton title="Login" color="primary"/>
+                <AppButton title="Register" color="secondary"/>
+            </View>
         </ImageBackground>
     );
 }
@@ -24,6 +29,10 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         alignItems: "center",
     },
+    btnContainer: {
+        padding: 20,
+        width: "100%"
+    },
     logo: {
         width: 100,
         height: 100,
@@ -33,30 +42,12 @@ const styles = StyleSheet.create({
         top: 50,
         alignItems: "center",    
     },
-    login: {
-        width: "100%",
-        height: 60,
-        backgroundColor: colors.primary,
-        borderRadius: 20,
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: 20,
-        fontWeight: "bold",
-        marginBottom: 2,
-        color: colors.white,
-    },
-    register: {
-        width: "100%",
-        height: 60,
-        backgroundColor: colors.secondary,
-        borderRadius: 20,
-        alignItems:"center",
-        justifyContent: "center",
-        fontSize: 20,
-        fontWeight: "bold",
-        marginBottom: 2,
-        color: colors.white,
-    },
+    tagline: {
+        fontSize: 25,
+        fontWeight: "600",
+        paddingVertical: 20,
+
+    }
 });
 
 export default WelcomeScreen;
