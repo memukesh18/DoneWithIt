@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import colors from '../config/colors';
 
 function WelcomeScreen(props) {
     return (
@@ -35,26 +36,26 @@ const styles = StyleSheet.create({
     login: {
         width: "100%",
         height: 60,
-        backgroundColor: "#2d7a9c",
+        backgroundColor: colors.primary,
         borderRadius: 20,
         alignItems: "center",
         justifyContent: "center",
         fontSize: 20,
         fontWeight: "bold",
         marginBottom: 2,
-        color: "#fff",
+        color: colors.white,
     },
     register: {
         width: "100%",
         height: 60,
-        backgroundColor: "#d1b834",
+        backgroundColor: colors.secondary,
         borderRadius: 20,
         alignItems:"center",
         justifyContent: "center",
         fontSize: 20,
         fontWeight: "bold",
         marginBottom: 2,
-        color: "#fff",
+        color: colors.white,
     },
 });
 
