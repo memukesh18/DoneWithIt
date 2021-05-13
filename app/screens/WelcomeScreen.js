@@ -14,7 +14,6 @@ function WelcomeScreen(props) {
             <View style={styles.logoContainer}>
                 <Image style={styles.logo} source={require("../assets/firebird-logo.png")}/>
                 <AppText style={styles.tagline}>Sell What You Don't Need!</AppText>
-                {/* <Text style={styles.tagline}>Sell What You Don't Need!</Text> */}
             </View>
             <View style={styles.btnContainer}>
                 <AppButton title="Login" color="primary"/>
