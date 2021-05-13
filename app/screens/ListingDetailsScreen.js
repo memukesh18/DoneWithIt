@@ -8,7 +8,7 @@ import colors from '../config/colors';
 
 function ListingDetailsScreen(props) {
     return (
-        <View>
+        <View style={styles.container}>
             <Image style={styles.image} source={require("../assets/jacket.jpg")}/>
             <View style={styles.detailsContainer}>
                 <AppText style={styles.title}>Red Jacket For Sale</AppText>
@@ -26,6 +26,9 @@ function ListingDetailsScreen(props) {
 }
 
 const styles = StyleSheet.create({
+    container:{
+        padding: 20,
+    },
     detailsContainer: {
         padding: 20,
     },
