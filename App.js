@@ -1,9 +1,15 @@
 import React from 'react';
 
-import ListingsScreen from './app/screens/ListingsScreen';
+import AppScreen from './app/component/AppScreen';
+import AppTextInput from './app/component/AppTextInput';
+
 
 
 export default function App() {
   
-  return <ListingsScreen />; 
+  return (
+    <AppScreen>
+      <AppTextInput placeholder="User Name" icon="email"/>
+    </AppScreen>
+  ); 
 }
