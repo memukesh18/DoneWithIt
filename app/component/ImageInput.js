@@ -48,8 +48,8 @@ function ImageInput({ imageUri, onChangeImage }) {
       <View style={styles.container}>
         {!imageUri && (
           <MaterialCommunityIcons
-            name="camera"
             color={colors.medium}
+            name="camera"
             size={50}
           />
         )}
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     height: 100,
     justifyContent: "center",
+    marginVertical: 10,
     overflow: "hidden",
     width: 100,
   },
